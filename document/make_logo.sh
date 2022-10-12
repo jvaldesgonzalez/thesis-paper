@@ -1,2 +1,2 @@
 #!/bin/sh
-inkscape -D --export-filename=.\Graphics\uhlogo.pdf --export-latex .\Graphics\uhlogo.svg
+inkscape -D --export-pdf=./Graphics/uhlogo.pdf --export-latex ./Graphics/uhlogo.svg
