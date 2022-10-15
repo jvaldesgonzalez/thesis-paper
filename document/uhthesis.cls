@@ -23,15 +23,19 @@
 \RequirePackage{csquotes}
 \RequirePackage[
 	style=apa,
-	citestyle=authoryear,
+  backend=biber,
+	citestyle=numeric,
   hyperref=true,
 	backref=true
 	]{biblatex}
+
 \RequirePackage[linktocpage,breaklinks,colorlinks,%
                 linkcolor=black,anchorcolor=black,citecolor=black,%
                 filecolor=black,menucolor=black,runcolor=black,%
                 urlcolor=black]{hyperref}
-                
+
+\DeclareLanguageMapping{spanish}{spanish-apa}         
+
 % fancyhdr settings from texlive-doc
 \RequirePackage{fancyhdr}
 \fancypagestyle{plain}{%
@@ -74,14 +78,14 @@
 \renewcommand{\textfraction}{0.07}
 
 % Whole biblatex hyperref to bibliography
-\DeclareCiteCommand{\cite}
+\DeclareCiteCommand{\cite}[\mkbibbrackets]
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
    \printtext[bibhyperref]{\usebibmacro{cite}}}
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
-\DeclareCiteCommand*{\cite}
+\DeclareCiteCommand*{\cite}[\mkbibbrackets]
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
    \printtext[bibhyperref]{\usebibmacro{citeyear}}}
