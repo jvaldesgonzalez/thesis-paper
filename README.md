@@ -1,1 +1,1 @@
-# Latex template for students thesis of MatCom
+# Latex template for students thesis of MatCom.
